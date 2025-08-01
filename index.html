@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meu Site</title>
-  <!-- Link para o arquivo CSS (se tiver) -->
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entendendo o addEventListener</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Bem-vindo ao meu site!</h1>
-  <p id="texto">Este texto vai mudar de cor ao clicar no botão.</p>
-  <button id="mudarCorBtn">Mudar Cor</button>
+    <div class="container">
+        <header>
+            <h1>Entendendo o método addEventListener em JavaScript</h1>
+        </header>
+        <section class="explicacao">
+            <p>
+                O <strong>addEventListener</strong> é um método que permite que você execute uma função
+                sempre que um evento ocorre em um elemento HTML, como um clique, passar o mouse, entre outros.
+            </p>
+            <p>
+                Ele é muito útil para tornar suas páginas interativas, pois você pode associar várias ações a diferentes eventos.
+            </p>
+            <p>
+                Aqui está um exemplo básico de uso do <code>addEventListener</code> para mudar a cor de um texto ao clicar no botão.
+            </p>
+        </section>
+        <section class="exemplo">
+            <h2>Exemplo de código JavaScript com addEventListener</h2>
+            <pre><code id="codigo-js">
+const botao = document.getElementById('mudarCorBtn');
+const texto = document.getElementById('texto');
 
-  <!-- Link para o arquivo JavaScript -->
-  <script src="script.js"></script>
+botao.addEventListener('click', () => {
+    texto.style.color = 'blue';
+});
+            </code></pre>
+        </section>
+        <section class="interacao">
+            <h2>Teste a interação</h2>
+            <p id="texto">Este texto vai mudar de cor ao clicar no botão abaixo.</p>
+            <button id="mudarCorBtn">Clique aqui para mudar a cor do texto</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
