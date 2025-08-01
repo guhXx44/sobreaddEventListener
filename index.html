@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entendendo o addEventListener</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔔 Entendendo o <code>addEventListener</code> no JavaScript</h1>
+    <p>
+      O método <strong><code>addEventListener()</code></strong> permite registrar múltiplos manipuladores de eventos em um único elemento. 
+      Ele é muito útil para tornar as páginas interativas sem sobrescrever outras funções de evento.
+    </p>
+
+    <h2>📌 Exemplo de uso:</h2>
+    <pre><code>
+const botao = document.getElementById("meuBotao");
+botao.addEventListener("click", function() {
+  alert("Você clicou no botão!");
+});
+    </code></pre>
+
+    <h2>🎯 Teste interativo:</h2>
+    <button id="meuBotao">Clique para interagir</button>
+
+    <div id="resultado" class="oculto">
+      <p id="mensagem">Este texto será alterado ao clicar no botão!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
