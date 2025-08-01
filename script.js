@@ -7,18 +7,21 @@ let contador = 0;
 botao.addEventListener("click", () => {
   contador++;
 
-  // 1. Mostrar a div oculta
+  // 1. Mostrar a mensagem
   resultado.classList.add("mostrar");
 
   // 2. Alternar a cor do texto
-  const cores = ["#0077cc", "#d62828", "#2a9d8f", "#f4a261"];
+  const cores = ["#00aaff", "#ff006e", "#00ff88", "#f9c74f"];
   mensagem.style.color = cores[contador % cores.length];
 
-  // 3. Alterar o conteúdo da mensagem
+  // 3. Mudar o conteúdo do texto
   mensagem.textContent = `Você clicou ${contador} vez${contador > 1 ? "es" : ""}!`;
 
-  // 4. Exibir alerta a cada 3 cliques
-  if (contador % 3 === 0) {
-    alert("Você clicou 3 vezes!");
+  // 4. Girar o texto levemente para efeito visual
+  mensagem.style.transform = `rotate(${(contador % 2 === 0 ? 5 : -5)}deg)`;
+
+  // Alerta a cada 5 cliques
+  if (contador % 5 === 0) {
+    alert("Você clicou 5 vezes!");
   }
 });
