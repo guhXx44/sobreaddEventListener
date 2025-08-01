@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entendendo o addEventListener</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Entendendo o método addEventListener em JavaScript</h1>
+        </header>
+        <section>
+            <h2>O que é o addEventListener?</h2>
+            <p>
+                O <strong>addEventListener</strong> é um método que permite que você execute uma função sempre que um evento ocorre em um elemento HTML, como um clique, passar o mouse, entre outros.
+            </p>
+            <p>
+                Ele é muito útil para tornar suas páginas interativas, pois você pode associar várias ações a diferentes eventos.
+            </p>
+        </section>
+        <section>
+            <h2>Exemplo de uso</h2>
+            <p>Veja o código JavaScript abaixo:</p>
+            <pre><code id="codigo-js">
+const botao = document.getElementById('mudarCorBtn');
+const texto = document.getElementById('texto');
+
+botao.addEventListener('click', () => {
+    texto.style.color = 'blue';
+});
+            </code></pre>
+            <button id="mudarCorBtn" class="btn">Clique aqui para mudar a cor do texto</button>
+            <p id="texto">Este texto vai mudar de cor ao clicar no botão acima.</p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
